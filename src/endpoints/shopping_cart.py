@@ -1,7 +1,6 @@
 from fastapi import APIRouter
 # from src.store.auth import LoginRequest
 from src.store.repository import get_user_shopping_cart
-from fastapi.encoders import jsonable_encoder
 
 
 router = APIRouter(
@@ -12,7 +11,7 @@ router = APIRouter(
 
 
 @router.get('/shopping-carts')
-def login():
+def get_client_shopping_cart():
 
     data = get_user_shopping_cart(user_id=1)
 
