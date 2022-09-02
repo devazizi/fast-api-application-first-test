@@ -1,11 +1,10 @@
 from fastapi import APIRouter
-# from src.store.auth import LoginRequest
 from src.store.repository import get_user_shopping_cart
 
 
 router = APIRouter(
     prefix="/api/v1",
-    tags=["Auth"],
+    tags=["ShoppingCart"],
     responses={404: {"description": "Not found"}},
 )
 
